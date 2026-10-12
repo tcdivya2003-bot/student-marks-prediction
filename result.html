@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Student Marks Prediction Based on Study Hours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Marks Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('predict') }}">Predict Marks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card card-custom p-4 text-center">
+                    <h3 class="section-title">Prediction Result</h3>
+
+                    <p class="mb-1">Study Hours</p>
+                    <h4 class="mb-4">{{ study_hours }}</h4>
+
+                    <p class="mb-1">Predicted Marks</p>
+                    <div class="result-value">{{ "%.2f"|format(prediction) }} / 100</div>
+                    <span class="badge bg-{{ badge_class }} mt-3 p-2" style="font-size: 1rem;">{{ category }}</span>
+
+                    <p class="disclaimer mt-3">
+                        This is a machine learning based estimate and not a guaranteed examination result.
+                    </p>
+
+                    <a href="{{ url_for('predict') }}" class="btn btn-primary-custom btn-lg mt-3">Predict Again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Student Marks Prediction Based on Study Hours | MCA Academic Project
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

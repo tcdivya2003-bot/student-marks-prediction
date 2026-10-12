@@ -1,0 +1,101 @@
+/* style.css - Student Marks Prediction Based on Study Hours */
+
+:root {
+    --primary-color: #2c5f8a;
+    --primary-dark: #1e4360;
+    --accent-color: #3fa796;
+    --light-bg: #f5f8fa;
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2b2b2b;
+}
+
+.navbar-custom {
+    background-color: var(--primary-dark);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 70px 20px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+}
+
+.formula-box {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary-custom {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.result-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.section-title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-style: italic;
+}
